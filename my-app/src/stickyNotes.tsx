@@ -85,7 +85,7 @@ export const StickyNotes = () => {
         onChange={(event) =>setCreateNote({ ...createNote, title: event.target.value})}
         required></input></div>
 
-       <div><textarea style={{ background: currentTheme.background, color: currentTheme.foreground }}
+       <div><textarea placeholder="Note Content" style={{ background: currentTheme.background, color: currentTheme.foreground }}
        value={createNote.content}
        onChange={(event) =>setCreateNote({ ...createNote, content: event.target.value })}
        required></textarea></div>
