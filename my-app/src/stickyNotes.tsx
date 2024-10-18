@@ -52,8 +52,6 @@ export const StickyNotes = () => {
 
  const createNoteHandler = (event: React.FormEvent) => {
    event.preventDefault();
-   console.log("title: ", createNote.title);
-   console.log("content: ", createNote.content);
    createNote.id = notes.length + 1;
    setNotes([createNote, ...notes]);
    setCreateNote(initialNote);
