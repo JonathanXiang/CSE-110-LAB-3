@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler } from "react";
 import "./App.css";
 import { useState } from "react";
-import { GroceryItem } from "./types";
+import { GroceryItem, Label } from "./types";
 import { dummyGroceryList } from "./constants";
 import { useParams } from "react-router-dom";
 
@@ -47,13 +47,16 @@ export function ToDoList() {
 function ListItem(item: GroceryItem, changeHandler: ChangeEventHandler) {
  return (
    <div>
+    <label>
      <input
        type="checkbox"
        onChange={changeHandler}
        checked={item.isPurchased}
        name={item.name}
      />
+     
      {item.name}
+     </label>
    </div>
  );
 }
