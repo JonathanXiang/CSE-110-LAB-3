@@ -49,6 +49,7 @@ function ListItem(item: GroceryItem, changeHandler: ChangeEventHandler) {
    <div>
     <label>
      <input
+       key="{item}"
        type="checkbox"
        onChange={changeHandler}
        checked={item.isPurchased}
